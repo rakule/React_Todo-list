@@ -35,17 +35,14 @@ class TodoList extends Component{
     }
 
 
-    actifbutton(){
-        const tache = 'Pas fait';
     
-    }
 
     renderTodo() {
         return this.state.items.map((item) =>{
             return(
                 <div className="list-group-item" key={item}>
                     {item} <button className="btn btn-danger" onClick={this.supprTodo.bind(this, item) }>Delete</button>
-                    <button className="btn btn-danger" onClick={this.actifbutton.bind(this)}>{tache}</button>
+                    
                 </div>
             );
         } );
